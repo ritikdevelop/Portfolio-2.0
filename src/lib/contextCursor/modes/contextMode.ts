@@ -1,10 +1,11 @@
 import { TweenLite } from "gsap";
 import { getMoveIndex, isElHasProperty, getStyleProp } from "../chunks";
 import propNames from "../propNames";
+import type { CProps } from "../types";
 
 const contextMode = (
   cursor: HTMLElement,
-  props: CProps,
+  props: Required<CProps>,
   interactElements: NodeListOf<Element>
 ) => {
   const parallaxSpeed = {
@@ -12,7 +13,7 @@ const contextMode = (
     target: props.parallaxIndex * 1.5,
   };
   let isHovered: boolean = false;
-  let cursorTarget: HTMLElement = null;
+  let cursorTarget: HTMLElement = null as unknown as HTMLElement;
 
   const moveCursor = (e: MouseEvent) => {
     // If element is not hovered
@@ -68,54 +69,54 @@ const contextMode = (
       } else {
         TweenLite.to(cursor, props.transitionSpeed, {
           x:
-            cursorTarget.getBoundingClientRect().left -
-            (isElHasProperty(cursorTarget, propNames.noPadding)
-              ? null
+            cursorTarget!.getBoundingClientRect().left -
+            (isElHasProperty(cursorTarget!, propNames.noPadding)
+              ? 0
               : props.hoverPadding) +
-            (isElHasProperty(cursorTarget, propNames.noParallax)
+            (isElHasProperty(cursorTarget!, propNames.noParallax)
               ? 0
               : (e.clientX -
-                  cursorTarget.getBoundingClientRect().left -
-                  cursorTarget.clientWidth / 2) /
+                  cursorTarget!.getBoundingClientRect().left -
+                  cursorTarget!.clientWidth / 2) /
                 parallaxSpeed.cursor),
           y:
-            cursorTarget.getBoundingClientRect().top -
-            (isElHasProperty(cursorTarget, propNames.noPadding)
-              ? null
+            cursorTarget!.getBoundingClientRect().top -
+            (isElHasProperty(cursorTarget!, propNames.noPadding)
+              ? 0
               : props.hoverPadding) +
-            (isElHasProperty(cursorTarget, propNames.noParallax)
+            (isElHasProperty(cursorTarget!, propNames.noParallax)
               ? 0
               : (e.clientY -
-                  cursorTarget.getBoundingClientRect().top -
-                  cursorTarget.clientHeight / 2) /
+                  cursorTarget!.getBoundingClientRect().top -
+                  cursorTarget!.clientHeight / 2) /
                 parallaxSpeed.cursor),
           borderRadius:
             borderRadius *
-            (isElHasProperty(cursorTarget, propNames.noPadding) ? 1 : 1.5),
+            (isElHasProperty(cursorTarget!, propNames.noPadding) ? 1 : 1.5),
           width:
-            cursorTarget.clientWidth +
-            (isElHasProperty(cursorTarget, propNames.noPadding)
-              ? null
+            cursorTarget!.clientWidth +
+            (isElHasProperty(cursorTarget!, propNames.noPadding)
+              ? 0
               : props.hoverPadding * 2),
           height:
-            cursorTarget.clientHeight +
-            (isElHasProperty(cursorTarget, propNames.noPadding)
-              ? null
+            cursorTarget!.clientHeight +
+            (isElHasProperty(cursorTarget!, propNames.noPadding)
+              ? 0
               : props.hoverPadding * 2),
         });
         // For "NO PARALLAX" property
-        if (!isElHasProperty(cursorTarget, propNames.noParallax)) {
+        if (!isElHasProperty(cursorTarget!, propNames.noParallax)) {
           TweenLite.to(cursorTarget, props.transitionSpeed, {
             x: -getMoveIndex(
               e.clientX,
-              cursorTarget.getBoundingClientRect().left,
-              cursorTarget.clientWidth,
+              cursorTarget!.getBoundingClientRect().left,
+              cursorTarget!.clientWidth,
               parallaxSpeed.target
             ),
             y: -getMoveIndex(
               e.clientY,
-              cursorTarget.getBoundingClientRect().top,
-              cursorTarget.clientHeight,
+              cursorTarget!.getBoundingClientRect().top,
+              cursorTarget!.clientHeight,
               parallaxSpeed.target
             ),
           });
@@ -168,8 +169,8 @@ const contextMode = (
   };
 
   // Event listeners
-  document.addEventListener("mousewheel", (e: WheelEvent) => {
-    handleMouseOut(e);
+  document.addEventListener("mousewheel", (e: Event) => {
+    handleMouseOut(e as unknown as MouseEvent);
   });
 
   document.addEventListener("mousemove", (e: MouseEvent) => {
@@ -177,14 +178,14 @@ const contextMode = (
   });
 
   interactElements.forEach((item) => {
-    item.addEventListener("mouseenter", (e: MouseEvent) => {
-      handleMouseOver(e);
+    item.addEventListener("mouseenter", (e: Event) => {
+      handleMouseOver(e as MouseEvent);
     });
   });
 
   interactElements.forEach((item) => {
-    item.addEventListener("mouseleave", (e: MouseEvent) => {
-      handleMouseOut(e);
+    item.addEventListener("mouseleave", (e: Event) => {
+      handleMouseOut(e as MouseEvent);
     });
   });
 };

@@ -1,0 +1,31 @@
+src/lib/contextCursor/chunks/addCursor.ts(1,27): error TS2304: Cannot find name 'CProps'.
+src/lib/contextCursor/chunks/isElHasProperty.ts(4,7): error TS2531: Object is possibly 'null'.
+src/lib/contextCursor/index.ts(5,31): error TS2304: Cannot find name 'CProps'.
+src/lib/contextCursor/modes/contextMode.ts(7,10): error TS2304: Cannot find name 'CProps'.
+src/lib/contextCursor/modes/contextMode.ts(15,7): error TS2322: Type 'null' is not assignable to type 'HTMLElement'.
+src/lib/contextCursor/modes/contextMode.ts(97,13): error TS2531: Object is possibly 'null'.
+src/lib/contextCursor/modes/contextMode.ts(102,13): error TS2531: Object is possibly 'null'.
+src/lib/contextCursor/modes/contextMode.ts(171,12): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(type: keyof DocumentEventMap, listener: (this: Document, ev: Event | UIEvent | MouseEvent | WheelEvent | AnimationEvent | ... 16 more ... | TransitionBeforeSwapEvent) => any, options?: boolean | ... 1 more ... | undefined): void', gave the following error.
+    Argument of type '"mousewheel"' is not assignable to parameter of type 'keyof DocumentEventMap'.
+  Overload 2 of 2, '(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions | undefined): void', gave the following error.
+    Argument of type '(e: WheelEvent) => void' is not assignable to parameter of type 'EventListenerOrEventListenerObject'.
+      Type '(e: WheelEvent) => void' is not assignable to type 'EventListener'.
+        Types of parameters 'e' and 'evt' are incompatible.
+          Type 'Event' is missing the following properties from type 'WheelEvent': deltaMode, deltaX, deltaY, deltaZ, and 30 more.
+src/lib/contextCursor/modes/contextMode.ts(180,10): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(type: keyof ElementEventMap, listener: (this: Element, ev: Event) => any, options?: boolean | AddEventListenerOptions | undefined): void', gave the following error.
+    Argument of type '"mouseenter"' is not assignable to parameter of type 'keyof ElementEventMap'.
+  Overload 2 of 2, '(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions | undefined): void', gave the following error.
+    Argument of type '(e: MouseEvent) => void' is not assignable to parameter of type 'EventListenerOrEventListenerObject'.
+      Type '(e: MouseEvent) => void' is not assignable to type 'EventListener'.
+        Types of parameters 'e' and 'evt' are incompatible.
+          Type 'Event' is missing the following properties from type 'MouseEvent': altKey, button, buttons, clientX, and 23 more.
+src/lib/contextCursor/modes/contextMode.ts(186,10): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(type: keyof ElementEventMap, listener: (this: Element, ev: Event) => any, options?: boolean | AddEventListenerOptions | undefined): void', gave the following error.
+    Argument of type '"mouseleave"' is not assignable to parameter of type 'keyof ElementEventMap'.
+  Overload 2 of 2, '(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions | undefined): void', gave the following error.
+    Argument of type '(e: MouseEvent) => void' is not assignable to parameter of type 'EventListenerOrEventListenerObject'.
+      Type '(e: MouseEvent) => void' is not assignable to type 'EventListener'.
+        Types of parameters 'e' and 'evt' are incompatible.
+          Type 'Event' is missing the following properties from type 'MouseEvent': altKey, button, buttons, clientX, and 23 more.
