@@ -6,6 +6,12 @@ enum EMode {
   SEARCH = 'SEARCH',
 }
 
+interface Window {
+  updateStatusBar(mode?: EMode, command?: string, _?: unknown, position?: string): void;
+  performSearch(searchTerm: string): void;
+  clearSearch(): void;
+}
+
 let cursor: HTMLElement | null = document.getElementById('cursor');
 let currentMode: EMode = EMode.NORMAL;
 let commandBuffer = '';

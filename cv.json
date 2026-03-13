@@ -3,11 +3,11 @@
   "basics": {
     "name": "Ritik Rana",
     "label": "Software Developer",
-    "animated_main_label": "developer",
+    "animated_main_label": "Developer",
     "animated_secondary_initial_label": "Software",
     "animated_secondary_final_label": "fullstack",
-    "image": "",
-    "email": "",
+    "image": "./avatar.png",
+    "email": "hrithikrana216@gmail.com",
     "url": "https://ritikrana.com",
     "summary": "Accomplished technology professional with a solid track record of leadership and expertise in DHTML, CSS, and JavaScript, seeking a Software Engineer role at Vriksh Consultancy in Delhi.",
     "theme": "platinum",
@@ -105,7 +105,7 @@
         "GitHub": "mdi:github"
       }
     },
-        {
+    {
       "name": "Hope EK ASHA",
       "position": "Full-Stack Developer",
       "location_type": "Onsite",
@@ -145,8 +145,8 @@
       "institution": "Indira Gandhi National Open University, Delhi",
       "area": "Bachelor of Computer Application",
       "studyType": "Bachelor of Technology",
-      "startDate": "2020-08-01",
-      "endDate": "2024-06-30",
+      "startDate": "2023-08-01",
+      "endDate": "2026-06-30",
       "gpa": "8.1",
       "courses": [
         "Data Structures and Algorithms",
@@ -161,13 +161,43 @@
       "institution": "Ram Lakhan Singh Yadav College",
       "area": "Science",
       "studyType": "High School",
-      "startDate": "2018-06-01",
-      "endDate": "2020-05-31",
+      "startDate": "2021-06-01",
+      "endDate": "2023-05-31",
       "gpa": "65%",
       "courses": []
     }
   ],
   "certificates": [
+    {
+      "name": "React JS",
+      "issuer": "HackerRank",
+      "issueDate": "2026-01-01",
+      "url": "https://www.hackerrank.com/certificates/iframe/1bafc2bf8b5f"
+    },
+    {
+      "name": "Docker",
+      "issuer": "HackerRana",
+      "issueDate": "2024-05-01",
+      "url": "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIxNzQxIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvdGh1bWJfNTkzNjEyOF8xNzE2NjEyMjYwLnBuZyIsInVzZXJuYW1lIjoiUml0aWsgUmFuYSJ9&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F4231%2FGetting-Started-with-Docker%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1459160840955426919&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVNzU0dg%2ByMCsJ9kqyrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAProWxZBAAAA"
+    },
+    {
+      "name": "Software Engineer",
+      "issuer": "HackerRank",
+      "issueDate": "2024-01-01",
+      "url": "https://www.hackerrank.com/certificates/5e4e258fbd90"
+    },
+    {
+      "name": "Data Structures and Algorithms",
+      "issuer": "Internship Studio",
+      "issueDate": "2024-01-01",
+      "url": "https://www.linkedin.com/in/ritik-rana-37aa0b232/overlay/Certifications/1637947874/treasury/?profileId=ACoAADorpE4BZis3c_3uEIRymvYfmXpUzHuV1hQ"
+    },
+    {
+      "name": "JavaScript",
+      "issuer": "Geekster",
+      "issueDate": "2024-01-01",
+      "url": "https://www.linkedin.com/in/ritik-rana-37aa0b232/overlay/Certifications/538223224/treasury/?profileId=ACoAADorpE4BZis3c_3uEIRymvYfmXpUzHuV1hQ"
+    }
   ],
   "skills": [
     {
